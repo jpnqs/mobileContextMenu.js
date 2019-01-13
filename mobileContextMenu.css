@@ -1,0 +1,25 @@
+.mobileCtxMenuContainer {
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 0.3s;
+    background-color: lightgray;
+    bottom: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: gray;
+}
+
+.mobileCtxMenuButton {
+    width: 100%;
+    background-color: lightgray;
+    border-style: none;
+    padding: 40px;
+    font-size: 28pt;
+}
+
+.mobileCtxMenuSeperator {
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+}
