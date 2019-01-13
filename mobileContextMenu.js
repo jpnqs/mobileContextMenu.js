@@ -20,7 +20,16 @@ const mobileContextMenu = {
         }
     },
     setupListeners: function () {
-
+        window.addEventListener('contextmenu', ev => {
+            ev.preventDefault();
+            this.show();
+        });
+        window.addEventListener('blur', _ => {
+            this.hide();
+        });
+        window.addEventListener('resize', _ => {
+            this.hide();
+        });
     }, 
     buildFromTemplate: function (temp) {
         this.setup();
