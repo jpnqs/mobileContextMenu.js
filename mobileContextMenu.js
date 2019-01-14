@@ -81,7 +81,7 @@ const mobileContextMenu = {
         }
     },
     setDisabledStatus: function (bool) {
-        this.container.forEach(el => {
+        this.container.childNodes.forEach(el => {
             el.disabled = bool;
         });
     },
