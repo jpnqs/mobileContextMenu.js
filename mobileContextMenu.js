@@ -68,16 +68,23 @@ const mobileContextMenu = {
     },
     show: function () {
         if (this.container != null) {
+            this.setDisabledStatus(false);
             this.container.style.height = (Math.floor(window.innerHeight/2).toString() + "px");
             this.container.style.opacity = '1';
         }
     },
     hide: function () {
         if (this.container != null) {
+            this.setDisabledStatus(true);
             this.container.style.height = "0px";
             this.container.style.opacity = '0';
         }
-    }
+    },
+    setDisabledStatus: function (bool) {
+        this.container.forEach(el => {
+            el.disabled = bool;
+        });
+    },
 }
 
 mobileContextMenu.buildFromTemplate([
